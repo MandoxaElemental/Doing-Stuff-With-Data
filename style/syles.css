@@ -44,3 +44,12 @@ p{
 button{
     border: none;
 }
+
+button:hover{
+    opacity: 80%;
+}
+
+.buttonRow{
+    display: flex;
+    justify-content: end;
+}

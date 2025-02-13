@@ -14,6 +14,48 @@ let LastNameBtn = document.getElementById('lastNameBtn')
 let HeightBtn = document.getElementById('heightBtn')
 let AgeBtn = document.getElementById('ageBtn')
 
+let Ten = document.getElementById('10btn')
+let Twenty = document.getElementById('20btn')
+let Thirty = document.getElementById('30btn')
+let Forty = document.getElementById('40btn')
+let Fifty = document.getElementById('50btn')
+let chunkSize = 10;
+
+Ten.addEventListener('click', async () => {
+    chunkSize = 1;
+    divider()
+})
+Twenty.addEventListener('click', async () => {
+    chunkSize = 2;
+    divider()
+})
+Thirty.addEventListener('click', async () => {
+    chunkSize = 3;
+    divider()
+})
+Forty.addEventListener('click', async () => {
+    chunkSize = 4;
+    divider()
+})
+Fifty.addEventListener('click', async () => {
+    chunkSize = 5;
+    divider()
+})
+
+function divider(){
+    let chunks = [];
+    let newArr = getLocalStorage();
+
+    for (let i = 0; i < newArr.length; i += chunkSize) {
+    let chunk = [];
+    for (let j = i; j < i + chunkSize && j < newArr.length; j++) {
+        chunk.push(newArr[j]);
+    }
+        chunks.push(chunk);
+    }
+    console.log(chunks)
+}
+
 AddBtn.addEventListener('click', async () => {
     let localData = getLocalStorage()
     let ID = localData.length + 1;
