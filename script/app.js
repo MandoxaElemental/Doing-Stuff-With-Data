@@ -108,7 +108,8 @@ AddBtn.addEventListener('click', async () => {
     let Age = Number(AgeInput.value);
     let data = [ID, FirstName, LastName, Height, Age]
     saveToLocalStorage(data);
-    IDSort()
+    Arr = chunks[0]
+    List()
     FirstNameInput.value = ""
     LastNameInput.value = ""
     HeightInput.value = ""

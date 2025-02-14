@@ -29,7 +29,7 @@
     * vercel or azure
 
 ### Doing Stuff With Data _GitHub Repository Link:
-[Doing Stuff With Data GitHub Repository Link]()
+[Doing Stuff With Data GitHub Repository Link](https://github.com/MandoxaElemental/Doing-Stuff-With-Data)
 
 ### Doing Stuff With Data _Azure Link:
-[Doing Stuff With Data Azure Link]()
+[Doing Stuff With Data Azure Link](https://greinaresdswd-f4f8gfdfa2dfg6a7.westus-01.azurewebsites.net/)
