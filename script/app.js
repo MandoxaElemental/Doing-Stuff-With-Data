@@ -58,28 +58,29 @@ Five.addEventListener('click', async () => {
 Ten.addEventListener('click', async () => {
     chunkSize = 10;
     divider()
-    IDSort()
+    Arr = chunks[0]
+    List()
 })
 Twenty.addEventListener('click', async () => {
     chunkSize = 20;
     divider()
-    IDSort()
-})
+    Arr = chunks[0]
+    List()})
 Thirty.addEventListener('click', async () => {
     chunkSize = 30;
     divider()
-    IDSort()
-})
+    Arr = chunks[0]
+    List()})
 Forty.addEventListener('click', async () => {
     chunkSize = 40;
     divider()
-    IDSort()
-})
+    Arr = chunks[0]
+    List()})
 Fifty.addEventListener('click', async () => {
     chunkSize = 50;
     divider()
-    IDSort()
-})
+    Arr = chunks[0]
+    List()})
 
 let chunks = [];
 
