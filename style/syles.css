@@ -1,8 +1,9 @@
 body{
-    background-image: url('/public/assets/background.jpg');
+    background-image: url('/public/assets/Background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .centering{
@@ -12,12 +13,20 @@ body{
 
 input{
     width: 150px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border: rgb(220, 173, 54) solid thick;
+    border-style: ridge;
+    font-family: Fontsona3;
+    border-radius: 10px;
 }
 
 .inputGrid{
     display: grid;
     background-color: rgba(255, 255, 255, 0.489);
-}
+    border-radius: 10px;
+    border: rgb(220, 173, 54) solid thick;}
 
 .inputGrid > div{
     text-align: center;
@@ -39,10 +48,16 @@ p{
 
 #nameList{
     background-color: rgba(255, 255, 255, 0.468);
-}
+    width: 600px;
+    height: 300px;
+    overflow: scroll;
+    border: rgb(220, 173, 54) solid thick;}
 
 button{
     border: none;
+    background-color: rgb(220, 173, 54);
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button:hover{
@@ -52,4 +67,16 @@ button:hover{
 .buttonRow{
     display: flex;
     justify-content: end;
+}
+
+.myBtn{
+    
+    margin: 10px;
+    color: rgb(220, 173, 54); 
+    background-color: #151da6;
+    border: rgb(220, 173, 54) solid thick;
+    border-style: ridge;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 200px;
+    border-radius: 10px;
 }

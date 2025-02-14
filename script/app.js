@@ -19,31 +19,72 @@ let Twenty = document.getElementById('20btn')
 let Thirty = document.getElementById('30btn')
 let Forty = document.getElementById('40btn')
 let Fifty = document.getElementById('50btn')
+let One = document.getElementById('1btn')
+let Two = document.getElementById('2btn')
+let Three = document.getElementById('3btn')
+let Four = document.getElementById('4btn')
+let Five = document.getElementById('5btn')
 let chunkSize = 10;
 
-Ten.addEventListener('click', async () => {
-    chunkSize = 1;
-    divider()
+let IDBool = true
+let FirstBool = true
+let LastBool = true
+let HeightBool = true
+let AgeBool = true
+
+let current = 'ID'
+
+One.addEventListener('click', async () => {
+    Arr = chunks[0]
+    List()
 })
-Twenty.addEventListener('click', async () => {
-    chunkSize = 2;
-    divider()
+Two.addEventListener('click', async () => {
+    Arr = chunks[1]
+    List()
 })
-Thirty.addEventListener('click', async () => {
-    chunkSize = 3;
-    divider()
+Three.addEventListener('click', async () => {
+    Arr = chunks[2]
+    List()
 })
-Forty.addEventListener('click', async () => {
-    chunkSize = 4;
-    divider()
+Four.addEventListener('click', async () => {
+    Arr = chunks[3]
+    List()
 })
-Fifty.addEventListener('click', async () => {
-    chunkSize = 5;
-    divider()
+Five.addEventListener('click', async () => {
+    Arr = chunks[4]
+    List()
 })
 
+Ten.addEventListener('click', async () => {
+    chunkSize = 10;
+    divider()
+    IDSort()
+})
+Twenty.addEventListener('click', async () => {
+    chunkSize = 20;
+    divider()
+    IDSort()
+})
+Thirty.addEventListener('click', async () => {
+    chunkSize = 30;
+    divider()
+    IDSort()
+})
+Forty.addEventListener('click', async () => {
+    chunkSize = 40;
+    divider()
+    IDSort()
+})
+Fifty.addEventListener('click', async () => {
+    chunkSize = 50;
+    divider()
+    IDSort()
+})
+
+let chunks = [];
+
 function divider(){
-    let chunks = [];
+    chunks = [];
     let newArr = getLocalStorage();
 
     for (let i = 0; i < newArr.length; i += chunkSize) {
@@ -55,6 +96,7 @@ function divider(){
     }
     console.log(chunks)
 }
+divider()
 
 AddBtn.addEventListener('click', async () => {
     let localData = getLocalStorage()
@@ -121,47 +163,82 @@ function sortNestedArray(arr, index) {
     return arr;
   }
  function IDSort(){
-    Arr = getLocalStorage()
+     Arr = chunks[0]
+    if(IDBool === true){
+        IDBool = false
+    } else {
+        Arr = chunks[0].reverse()
+        IDBool = true
+    }
     List()
  } 
  IDSort()
 
 IDBtn.addEventListener('click', async () => {
+    current = "ID"
     IDSort()
 })
 FirstNameBtn.addEventListener('click', async () => {
+    current = "first"
     FirstNameSort()
 })
 LastNameBtn.addEventListener('click', async () => {
+    current = "last"
     LastNameSort()
 })
 HeightBtn.addEventListener('click', async () => {
+    current = "height"
     HeightSort()
 })
 AgeBtn.addEventListener('click', async () => {
+    current = "age"
     AgeSort()
 })
 
 
 function FirstNameSort(){
-      let testArr = getLocalStorage()
-      Arr = sortNestedArray(testArr, 1);
+      let testArr = chunks[0]
+      if (FirstBool === true){
+          Arr = sortNestedArray(testArr, 1);
+          FirstBool = false
+        } else {
+            Arr = sortNestedArray(testArr, 1).reverse();
+            FirstBool = true
+      }
       List()
 }
 
 function LastNameSort(){
-      let testArr = getLocalStorage()
-      Arr = sortNestedArray(testArr, 2);
+      let testArr = chunks[0]
+      if (LastBool === true){
+        Arr = sortNestedArray(testArr, 2);
+        LastBool = false
+      } else {
+          Arr = sortNestedArray(testArr, 2).reverse();
+          LastBool = true
+    }
       List()
 }
 
 function HeightSort(){
-      let testArr = getLocalStorage()
-      Arr = sortNumArray(testArr, 3);
+      let testArr = chunks[0]
+      if (HeightBool === true){
+        Arr = sortNumArray(testArr, 3);
+        HeightBool = false
+      } else {
+          Arr = sortNestedArray(testArr, 3).reverse();
+          HeightBool = true
+    }
       List()
 }
 function AgeSort(){
-      let testArr = getLocalStorage()
-      Arr = sortNumArray(testArr, 4);
+      let testArr = chunks[0]
+      if (AgeBool === true){
+        Arr = sortNumArray(testArr, 4);
+        AgeBool = false
+      } else {
+          Arr = sortNestedArray(testArr, 4).reverse();
+          AgeBool = true
+    }
       List()
 }
